@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rest_todo/screens/add_page.dart';
 
 class TOdoListPage extends StatefulWidget {
   const TOdoListPage({super.key});
@@ -16,9 +17,14 @@ class _TOdoListPageState extends State<TOdoListPage> {
         title: Text('Todo List'),
       ),
       floatingActionButton: FloatingActionButton.extended(
-          onPressed: () {}, label: Text('Add Todo')),
+          onPressed: navigateToAddPage, label: Text('Add Todo')),
     );
   }
 
-  void navigateToAddPage() {}
+  void navigateToAddPage() {
+    final route = MaterialPageRoute(
+      builder: (context) => AddTodoPage(),
+    );
+    Navigator.push(context, route);
+  }
 }
