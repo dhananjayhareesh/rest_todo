@@ -45,6 +45,5 @@ class TodoCard extends StatelessWidget {
         }),
       ),
     );
-    ;
   }
 }
